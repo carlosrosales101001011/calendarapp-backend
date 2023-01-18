@@ -20,10 +20,11 @@ app.use(express.static('public'));
 //Lectura y parseo del body
 app.use(express.json())
 //Rutas
-app.use('/api/auth/', require('./routes/auth'))
-//TODO auth // crear, login, renew
 //TODO CRUD: Eventos
+app.use('/api/events', require('./routes/events'))
 
+//TODO auth // crear, login, renew
+app.use('/api/auth', require('./routes/auth'))
 
 
 //Escuchar peticiones

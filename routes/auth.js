@@ -1,9 +1,13 @@
 const { Router } = require('express');
 const {check} = require('express-validator');
 const { crearUsuario, loginUsuario, revalidarToken } = require('../controller/auth');
-const { validarCampos } = require('../middlewares/validar-campos');
-const { validarJWT } = require('../middlewares/validar_jwt');
+const { validarCampos } = require('../middlewares/validarCampos');
+const { validarJWT } = require('../middlewares/validarJWT');
 const router = Router();
+/**
+ * [API Documentation]
+ * /api/auth/
+ */
 
 router.post('/register', 
             [
